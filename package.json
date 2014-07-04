@@ -1,0 +1,22 @@
+{
+  "name": "reddit-stream",
+  "version": "0.0.1",
+  "description": "EventSource stream of reddit submissions",
+  "main": "reddit-stream.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node reddit-stream.js"
+  },
+  "dependencies": {
+    "eventsource": "0.0.10",
+    "nodewhal": "git+ssh://git@github.com:go1dfish/nodewhal.git#master",
+    "rsvp": "2.0.4",
+    "superagent": "0.18.0"
+  },
+  "author": "go1dfish",
+  "licenses": [
+    {
+      "type": "WTFPL"
+    }
+  ]
+}
