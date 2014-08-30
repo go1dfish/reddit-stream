@@ -5,9 +5,13 @@ var request = require('superagent'),
     lastPostId = null, clients = [];
 
 setupServer();
-Nodewhal.schedule.repeat(function() {
-  return fetchPosts().then(function(posts) {posts.forEach(processPost)});
-}, 30000);
+return Nodewhal.schedule.repeat(function() {
+  return fetchPosts().then(function(posts) {posts.forEach(processPost)}).then(undefined, function(error) {
+     console.error(error.stack || error);
+  });
+}, 30000).then(undefined, function(error){
+  console.error(error.stack || error);
+});
 
 function fetchPosts() {
   return (new RSVP.Promise(function(resolve, reject) {
