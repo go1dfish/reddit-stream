@@ -9,8 +9,9 @@
   },
   "dependencies": {
     "eventsource": "0.0.10",
-    "nodewhal": "git+ssh://git@github.com:go1dfish/nodewhal.git#master",
+    "nodewhal": "git://github.com/go1dfish/nodewhal.git#master",
     "rsvp": "2.0.4",
+    "express": "4.4.5",
     "superagent": "0.18.0"
   },
   "author": "go1dfish",
